@@ -8,15 +8,20 @@ Plug 'plasticboy/vim-markdown'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ChaiScript/vim-chaiscript'
 Plug 'ChaiScript/vim-cpp'
-" Plug 'Mizuchi/STL-Syntax'
+"Plug 'Mizuchi/STL-Syntax'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'arecarn/crunch.vim'
+Plug 'tpope/vim-liquid'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'NLKNguyen/papercolor-theme'
+" Plug 'valloric/youcompleteme'
 
 " Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()
 
-" let g:doxygen_enhanced_color=1
-" let g:load_doxygen_syntax=1
+let g:doxygen_enhanced_color=1
+let g:load_doxygen_syntax=1
 
 set expandtab
 set shiftwidth=2
@@ -27,18 +32,33 @@ set number
 
 let g:gitgutter_sign_column_always = 1
 
+let g:ycm_confirm_extra_conf = 0
+
+
 let g:airline_powerline_fonts=1
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
 
 set background=dark
-let g:gruvbox_contrast_light="soft"
+"set background=dark
+let g:gruvbox_contrast_light="hard"
+let g:gruvbox_italic=1
+let g:gruvbox_invert_signs=0
+let g:gruvbox_improved_strings=0
+let g:gruvbox_improved_warnings=1
+let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
+
+"set t_Co=256
+"colorscheme PaperColor
+"let g:airline_theme='PaperColor'
 
 "let g:solarized_termcolors = 256
 "colorscheme solarized
 
 let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_folding_disabled = 1
+
 
 let g:vim_indent_guides_start_level = 2
 
@@ -53,8 +73,9 @@ autocmd BufReadPost *
 au VimEnter * RainbowParenthesesActivate
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
-" au Syntax * RainbowParenthesesLoadBraces
+au Syntax * RainbowParenthesesLoadBraces
 " au Syntax * RainbowParenthesesLoadChevrons
 
+set backup
 
 
