@@ -11,12 +11,16 @@ Plug 'ChaiScript/vim-cpp'
 "Plug 'Mizuchi/STL-Syntax'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'arecarn/crunch.vim'
-Plug 'tpope/vim-liquid'
+"Plug 'tpope/vim-liquid'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'NLKNguyen/papercolor-theme'
 " Plug 'valloric/youcompleteme'
-
+" Plug 'jaxbot/semantic-highlight.vim'
 " Plug 'nathanaelkane/vim-indent-guides'
+
+Plug 'spolu/dwm.vim'
+Plug 'terryma/vim-multiple-cursors'
+
 
 call plug#end()
 
@@ -40,7 +44,7 @@ let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
 
 set background=dark
-"set background=dark
+"set background=light
 let g:gruvbox_contrast_light="hard"
 let g:gruvbox_italic=1
 let g:gruvbox_invert_signs=0
@@ -64,6 +68,8 @@ let g:vim_indent_guides_start_level = 2
 
 
 set laststatus=2
+
+set termguicolors
 
 autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
