@@ -17,7 +17,9 @@ Plug 'NLKNguyen/papercolor-theme'
 " Plug 'valloric/youcompleteme'
 " Plug 'jaxbot/semantic-highlight.vim'
 " Plug 'nathanaelkane/vim-indent-guides'
-
+Plug 'https://github.com/vim-scripts/headerguard.git'
+Plug 'https://github.com/rhysd/vim-clang-format.git'
+Plug 'https://github.com/vim-scripts/mru.vim.git'
 Plug 'spolu/dwm.vim'
 Plug 'terryma/vim-multiple-cursors'
 
@@ -53,7 +55,7 @@ let g:gruvbox_improved_warnings=1
 let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
 
-"set t_Co=256
+set t_Co=256
 "colorscheme PaperColor
 "let g:airline_theme='PaperColor'
 
@@ -66,6 +68,16 @@ let g:vim_markdown_folding_disabled = 1
 
 let g:vim_indent_guides_start_level = 2
 
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+let g:mapleader = ","
+
+map <space> /
+map <c-space> ?
+
+let MRU_Max_Entries = 400
+map <leader>f :MRU<CR>
 
 set laststatus=2
 
