@@ -22,6 +22,7 @@ Plug 'https://github.com/rhysd/vim-clang-format.git'
 Plug 'https://github.com/vim-scripts/mru.vim.git'
 Plug 'spolu/dwm.vim'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'https://github.com/antoyo/vim-licenses.git'
 
 
 call plug#end()
@@ -35,6 +36,7 @@ set lcs=trail:·,tab:»·
 set list
 set cursorline
 set number
+set relativenumber
 
 let g:gitgutter_sign_column_always = 1
 
@@ -55,7 +57,7 @@ let g:gruvbox_improved_warnings=1
 let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
 
-set t_Co=256
+"set t_Co=256
 "colorscheme PaperColor
 "let g:airline_theme='PaperColor'
 
