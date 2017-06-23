@@ -8,10 +8,11 @@ Plug 'plasticboy/vim-markdown'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ChaiScript/vim-chaiscript'
 Plug 'ChaiScript/vim-cpp'
-"Plug 'Mizuchi/STL-Syntax'
+" Plug 'Mizuchi/STL-Syntax'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'arecarn/crunch.vim'
-"Plug 'tpope/vim-liquid'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+" Plug 'tpope/vim-liquid'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'NLKNguyen/papercolor-theme'
 " Plug 'valloric/youcompleteme'
@@ -36,9 +37,10 @@ set lcs=trail:·,tab:»·
 set list
 set cursorline
 set number
-set relativenumber
+" set relativenumber
 
-let g:gitgutter_sign_column_always = 1
+" let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
 
 let g:ycm_confirm_extra_conf = 0
 
@@ -47,8 +49,8 @@ let g:airline_powerline_fonts=1
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
 
-set background=dark
-"set background=light
+" set background=dark
+" set background=light
 let g:gruvbox_contrast_light="hard"
 let g:gruvbox_italic=1
 let g:gruvbox_invert_signs=0
@@ -57,7 +59,7 @@ let g:gruvbox_improved_warnings=1
 let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
 
-"set t_Co=256
+set t_Co=256
 "colorscheme PaperColor
 "let g:airline_theme='PaperColor'
 
@@ -84,7 +86,16 @@ map <leader>f :MRU<CR>
 let g:licenses_copyright_holders_name = 'Suboch, Vadim <vssuboch@gmail.com>'
 set laststatus=2
 
-set termguicolors
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_map = '<c-f>'
+map <leader>j :CtrlP<cr>
+map <c-b> :CtrlPBuffer<cr>
+
+let g:ctrl_max_height = 20
+let g:ctrlp_custorm_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffe'
+
+
+" set termguicolors
 
 autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
