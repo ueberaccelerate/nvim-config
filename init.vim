@@ -8,24 +8,24 @@ Plug 'plasticboy/vim-markdown'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ChaiScript/vim-chaiscript'
 Plug 'ChaiScript/vim-cpp'
-" Plug 'Mizuchi/STL-Syntax'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'arecarn/crunch.vim'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
-" Plug 'tpope/vim-liquid'
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'NLKNguyen/papercolor-theme'
-" Plug 'valloric/youcompleteme'
-" Plug 'jaxbot/semantic-highlight.vim'
-" Plug 'nathanaelkane/vim-indent-guides'
 Plug 'https://github.com/vim-scripts/headerguard.git'
 Plug 'https://github.com/rhysd/vim-clang-format.git'
 Plug 'https://github.com/vim-scripts/mru.vim.git'
 Plug 'spolu/dwm.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'https://github.com/antoyo/vim-licenses.git'
-
-
+" Plug 'Mizuchi/STL-Syntax'
+" Plug 'tpope/vim-liquid'
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+" 
+"
+" Plug 'valloric/youcompleteme'
+" Plug 'jaxbot/semantic-highlight.vim'
+" Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
 
 let g:doxygen_enhanced_color=1
@@ -44,12 +44,11 @@ set signcolumn=yes
 
 let g:ycm_confirm_extra_conf = 0
 
-
 let g:airline_powerline_fonts=1
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
 
-" set background=dark
+set background=dark
 " set background=light
 let g:gruvbox_contrast_light="hard"
 let g:gruvbox_italic=1
@@ -108,6 +107,4 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 " au Syntax * RainbowParenthesesLoadChevrons
 
-set backup
-
-
+set nobackup
