@@ -1,5 +1,4 @@
 call plug#begin('~/.config/nvim/plugged')
-
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
@@ -18,14 +17,6 @@ Plug 'https://github.com/vim-scripts/mru.vim.git'
 Plug 'spolu/dwm.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'https://github.com/antoyo/vim-licenses.git'
-" Plug 'Mizuchi/STL-Syntax'
-" Plug 'tpope/vim-liquid'
-" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
-" 
-"
-" Plug 'valloric/youcompleteme'
-" Plug 'jaxbot/semantic-highlight.vim'
-" Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
 
 let g:doxygen_enhanced_color=1
@@ -41,15 +32,13 @@ set number
 
 " let g:gitgutter_sign_column_always = 1
 set signcolumn=yes
-
-let g:ycm_confirm_extra_conf = 0
+" let g:ycm_confirm_extra_conf = 0
 
 let g:airline_powerline_fonts=1
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
 
 set background=dark
-" set background=light
 let g:gruvbox_contrast_light="hard"
 let g:gruvbox_italic=1
 let g:gruvbox_invert_signs=0
@@ -59,9 +48,7 @@ let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
 
 set t_Co=256
-"colorscheme PaperColor
 "let g:airline_theme='PaperColor'
-
 "let g:solarized_termcolors = 256
 "colorscheme solarized
 
@@ -93,9 +80,7 @@ map <c-b> :CtrlPBuffer<cr>
 let g:ctrl_max_height = 20
 let g:ctrlp_custorm_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffe'
 
-
 " set termguicolors
-
 autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
@@ -107,4 +92,4 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 " au Syntax * RainbowParenthesesLoadChevrons
 
-set nobackup
+set backup
