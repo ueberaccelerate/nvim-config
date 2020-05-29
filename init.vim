@@ -17,13 +17,14 @@ Plug 'https://github.com/vim-scripts/mru.vim.git'
 Plug 'spolu/dwm.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'https://github.com/antoyo/vim-licenses.git'
+" Plug 'jeaye/color_coded'
 call plug#end()
 
 let g:doxygen_enhanced_color=1
 let g:load_doxygen_syntax=1
 
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 set lcs=trail:·,tab:»·
 set list
 set cursorline
